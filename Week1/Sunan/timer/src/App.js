@@ -3,7 +3,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import {FaStopCircle, FaPlusCircle, FaPauseCircle, FaPlayCircle} from 'react-icons/fa'
 
-function Timer() {
+function Stopwatch() {
   const [time, setTime] = useState(0);
   const [start, setStart] = useState(false);
 
@@ -38,7 +38,7 @@ function Timer() {
 
   return (
     <div>
-      <div><h1>타이머</h1></div>
+      <div><h1>스톱워치</h1></div>
       <time>
         {`0${Math.floor((time / 60000) % 60)}`.slice(-2)} :
         {`0${Math.floor((time / 1000) % 60)}`.slice(-2)} :
@@ -54,8 +54,8 @@ function Timer() {
   );
 }
 
-function Stopwatch() {
-  return <h1>스탑와치입니다.!</h1>;
+function Timer() {
+  return <h1>타이머입니다.!</h1>;
 }
 
 function App() {
