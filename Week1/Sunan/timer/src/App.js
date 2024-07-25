@@ -1,9 +1,61 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import {FaStopCircle, FaPlusCircle, FaPauseCircle, FaPlayCircle} from 'react-icons/fa'
 
 function Timer() {
-  return <h1>타이머입니다.!</h1>;
+  const [time, setTime] = useState(0);
+  const [start, setStart] = useState(false);
+
+  useEffect(() => {
+    let interval;
+
+    if (start) {
+      interval = setInterval(() => {
+        setTime((prevTime) => prevTime + 10);
+      }, 10);
+    } else if (!start && time !== 0) {
+      clearInterval(interval);
+    }
+
+    return () => clearInterval(interval);
+  }, [start, time]);
+
+  const handleStart = () => {
+    setStart(true);
+  };
+  const handleRecord = () => {
+    setTime(0);
+  };
+  const handleStop = () => {
+    setStart(false);
+  };
+
+  const handleReset = () => {
+    setTime(0);
+    setStart(false);
+  };
+
+  return (
+    <div>
+      <div><h1>타이머</h1></div>
+      <time>
+        {`0${Math.floor((time / 60000) % 60)}`.slice(-2)} :
+        {`0${Math.floor((time / 1000) % 60)}`.slice(-2)} :
+        {`0${Math.floor((time / 10) % 100)}`.slice(-2)}
+      </time>
+      <div className="button-container">
+        <button onClick={handleStart}><FaPlayCircle className='icon'/></button>
+        <button onClick={handleRecord}><FaPlusCircle className='icon'/></button>
+        <button onClick={handleStop}><FaPauseCircle className='icon'/></button>
+        <button onClick={handleReset}><FaStopCircle className='icon'/></button>
+      </div>
+    </div>
+  );
+}
+
+function Stopwatch() {
+  return <h1>스탑와치입니다.!</h1>;
 }
 
 function App() {
@@ -13,9 +65,9 @@ function App() {
   if (mode === 'TIMER') {
     content = <Timer />;
   } else {
-    content = <Timer />;
+    content = <Stopwatch />;
   }
-//className ="" 적는것은 요소에 CSS 클래스를 적용하는데에 사용된다고
+
   return (
     <div className="container">
       <div className="item">
@@ -29,8 +81,10 @@ function App() {
           setMode('STOPWATCH');
         }} className={`mode ${mode === 'STOPWATCH' ? 'active' : ''}`}><p>스톱워치</p></a>
       </div>
+      <div><hr className="line"></hr></div>
       <div className="item">{content}</div>
-      <div className="item">{content}</div>
+      <div><hr className="line"></hr></div>
+      <div className="item">시간기록 부분</div>
     </div>
   );
 }
