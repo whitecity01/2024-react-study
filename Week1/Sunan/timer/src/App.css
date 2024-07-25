@@ -1,38 +1,17 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around; /* 이 설정은 요소들을 가로로 배치합니다 */
+  align-items: center; /* 이 설정은 요소들을 수직으로 가운데 정렬합니다 */
 }
-
-.App-link {
-  color: #61dafb;
+.mode{
+  font-size: xx-large;
+  color:black;
+  text-decoration-line: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mode.active{
+  color: red;
+}
+.item {
+  display: inline-block;
+  margin: 20 10px; /* 각 요소 사이에 간격을 추가합니다 */
 }
