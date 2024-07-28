@@ -1,0 +1,11 @@
+.RecordsList{
+    display: flex;
+    flex-direction: column;
+
+
+    .title{
+        font-size: 100px;
+        margin-bottom: 40px;
+        color: black;
+    }
+}

@@ -1,0 +1,37 @@
+.Template{
+    width: 100%;
+    height: 90vh;
+    background: rgb(212, 212, 212);
+
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    display: flex;
+    .select-mode{
+        flex: 1;
+        // background: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }   
+    
+    .clock{
+        flex: 2;
+        // background: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+    }
+
+    .records-list{
+        flex: 1;;
+        // background: blue;
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+    }
+    
+}

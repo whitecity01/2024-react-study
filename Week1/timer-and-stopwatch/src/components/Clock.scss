@@ -1,0 +1,30 @@
+.Clock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background: yellowgreen;
+
+    .title{
+        font-size: 100px;
+        margin-bottom: 40px;
+        color: black;
+    }
+    .time{
+        font-size: 100px;
+        margin-bottom: 40px;
+        color: black;
+    }
+    .buttons{
+        .button{
+            cursor: pointer;
+
+            img{
+                width: 70px;
+                height: 70px;
+                margin: 5px;
+            }
+        }
+        
+    }
+}
