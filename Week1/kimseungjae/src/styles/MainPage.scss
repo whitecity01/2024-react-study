@@ -1,0 +1,25 @@
+.main-container {
+  position: relative;
+  display: flex;
+  width: 90%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .option-container {
+    flex: 1.5;
+    height: 100%;
+    border-right: 1px solid black;
+  }
+
+  .timeapp-container {
+    flex: 4;
+  }
+
+  .record-container {
+    flex: 2;
+    height: 100%;
+    border-left: 1px solid black;
+  }
+}
