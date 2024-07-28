@@ -1,27 +1,34 @@
 import { useState, useCallback, useEffect} from 'react';
 import './Clock.scss';
 
-const Clock = ({className, onPlus}) =>{
+const Clock = ({className, onPlus, mode}) =>{
     const [time, setTime] = useState(0);
     const [isRunning, setIsRunning] = useState(false);
 
     useEffect(() => {
         let timer;
         if (isRunning) {
+            const delta = mode === '타이머' ? -10 : 10;
             timer = setInterval(() => {
-                setTime(prevTime => prevTime + 10);
+                setTime(prevTime => prevTime + delta);
             }, 10);
         }
         return () => clearInterval(timer);
-    }, [isRunning]);
+    }, [isRunning, mode]);
 
-    const play = () => setIsRunning(true);
-    const pause = () => setIsRunning(false);
-    const stop = () => {
+    useEffect(() => {
+        if (mode === '타이머' && time <= 0) {
+            onClickStop();
+        }
+    }, [time, mode]);
+
+    const onClickPlay = () => setIsRunning(true);
+    const onClickPause = () => setIsRunning(false);
+    const onClickStop = () => {
         setIsRunning(false);
         setTime(0);
     };
-    const plus = useCallback(
+    const onClickPlus = useCallback(
         e=>{
             onPlus(formatTime(time));
         },
@@ -44,19 +51,19 @@ const Clock = ({className, onPlus}) =>{
     return(
         <div className={className}>
             <div className='Clock'>
-                <div className='title'>스톱워치</div>
+                <div className='title'>{mode}</div>
                 <div className='time'>{formatTime(time)}</div>
                 <div className='buttons'>
-                    <button className='button' onClick={play}>
+                    <button className='button' onClick={onClickPlay}>
                         <img src={process.env.PUBLIC_URL + 'icons/play.png'}/>
                     </button>
-                    <button className='button' onClick={plus}>
+                    <button className='button' onClick={onClickPlus}>
                         <img src={process.env.PUBLIC_URL + 'icons/plus.png'}/>
                     </button>
-                    <button className='button' onClick={pause}>
+                    <button className='button' onClick={onClickPause}>
                         <img src={process.env.PUBLIC_URL + 'icons/pause.png'}/>
                     </button>
-                    <button className='button' onClick={stop}>
+                    <button className='button' onClick={onClickStop}>
                         <img src={process.env.PUBLIC_URL + 'icons/stop.png'}/>
                     </button>
                 </div>

@@ -1,16 +1,15 @@
 import { useState, useRef, useCallback } from 'react';
 
-import Template from './components/Template';
+import './App.scss';
 import SelectMode from './components/SelectMode';
 import Clock from './components/Clock';
 import RecordsList from './components/RecordsList';
 
 const App = () =>{
-  const [records, setRecords] = useState([
-    
-  ]);
+  const [selectedMode, setSelectedMode] = useState('타이머'); // 처음 모드는 타이머
 
-  const nextId = useRef(4);
+  const [records, setRecords] = useState([]); // 시간 기록 배열
+  const nextId = useRef(1);
   const onPlus = useCallback(
     text => {
       const record = {
@@ -25,11 +24,11 @@ const App = () =>{
   );
 
   return (
-    <Template>
-      <SelectMode className='select-mode'></SelectMode>
-      <Clock className='clock' onPlus={onPlus}></Clock>
+    <div className='App'>
+      <SelectMode className='select-mode' selectedMode={selectedMode} changeMode={setSelectedMode}></SelectMode>
+      <Clock className='clock' onPlus={onPlus} mode={selectedMode}></Clock>
       <RecordsList className='records-list' records={records}></RecordsList>
-    </Template>
+    </div>
   );
 }
 

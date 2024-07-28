@@ -5,7 +5,7 @@ const RecordItem = ({record}) =>{
 
     return(
         <div className='RecordItem'>
-            <div className='record'>{text}</div>
+            {text}
         </div>
     );
 }
