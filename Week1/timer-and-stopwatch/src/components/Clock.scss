@@ -4,8 +4,13 @@
     justify-content: center;
     align-items: center;
 
+    flex: 2;
+
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+
     .title{
-        font-size: 100px;
+        font-size: 80px;
         margin-bottom: 40px;
     }
     .time{
@@ -14,11 +19,13 @@
     }
     .buttons{
         .button{
+            border: none;
+            padding: 0;
             cursor: pointer;
 
             img{
-                width: 70px;
-                height: 70px;
+                width: 80px;
+                height: 80px;
                 margin: 5px;
             }
         }

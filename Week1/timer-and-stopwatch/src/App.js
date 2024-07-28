@@ -9,7 +9,7 @@ const App = () =>{
   const [selectedMode, setSelectedMode] = useState('타이머'); // 처음 모드는 타이머
 
   const [records, setRecords] = useState([]); // 시간 기록 배열
-  const nextId = useRef(1);
+  const nextId = useRef(1); // record의 id 초기화
   const onPlus = useCallback(
     text => {
       const record = {
@@ -17,7 +17,7 @@ const App = () =>{
         text,
       };
 
-      setRecords(records.concat(record));
+      setRecords(records.concat(record)); // 리스트에 새 recods추가
       nextId.current +=1;
     },
     [records],
@@ -25,9 +25,9 @@ const App = () =>{
 
   return (
     <div className='App'>
-      <SelectMode className='select-mode' selectedMode={selectedMode} changeMode={setSelectedMode}></SelectMode>
-      <Clock className='clock' onPlus={onPlus} mode={selectedMode}></Clock>
-      <RecordsList className='records-list' records={records}></RecordsList>
+      <SelectMode selectedMode={selectedMode} changeMode={setSelectedMode}></SelectMode>
+      <Clock onPlus={onPlus} mode={selectedMode}></Clock>
+      <RecordsList records={records}></RecordsList>
     </div>
   );
 }
