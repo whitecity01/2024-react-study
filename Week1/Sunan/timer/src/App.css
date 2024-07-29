@@ -59,7 +59,7 @@ button:hover {
   background-color: #444;
 }
 time {
-  font-size: xx-large; /* 타이머 텍스트 색상 변경 */
+  font-size: xx-large; 
 }
 .icon{
   font-size: 50px;
