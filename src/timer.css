@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;    
+}
+
+.content {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.time{
+    font-size: 40px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.buttonImage {
+    width: 30px;
+    height: 30px;
+    object-fit: contain; /* 이미지가 버튼 크기에 맞게 조정되도록 */
+}
+
+.records {
+    flex: 1;
+    text-align: left;
+}
