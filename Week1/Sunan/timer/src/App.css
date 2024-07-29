@@ -3,9 +3,11 @@ body{
 }
 .container {
   background-color: rgb(223, 220, 220);
-  display: flex;
-  justify-content: space-around; /* 이 설정은 요소들을 가로로 배치합니다 */
-  align-items: center; /* 이 설정은 요소들을 수직으로 가운데 정렬합니다 */
+  display:flex;
+  justify-content: center;
+  align-items: center; 
+  margin-left: 100px;
+  margin-right: 100px;
 }
 .mode{
   font-size: xx-large;
@@ -21,15 +23,21 @@ body{
   margin: 0 0px; /* 각 요소 사이에 간격을 추가합니다 */
 }
 .line{
+  margin-left: 50px;
   border-left: medium solid black;
   height: 500px;
 }
 .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start ;
   gap: 10px;
   margin-top: 20px;
   background-color: white;
+}
+.records {
+  font-size: x-large;
+  padding-left: 100px;
+  font-weight: 550;
 }
 
 button {
