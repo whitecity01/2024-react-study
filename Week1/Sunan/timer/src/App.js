@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
-import {FaStopCircle, FaPlusCircle, FaPauseCircle, FaPlayCircle} from 'react-icons/fa'
+import {FaStopCircle, FaPlusCircle, FaPauseCircle, FaPlayCircle} from 'react-icons/fa';
 
 function Stopwatch() {
   const [time, setTime] = useState(0);
@@ -67,7 +67,6 @@ function Stopwatch() {
         </ul>
       </div>
     </div>
-    
   );
 }
 
