@@ -1,0 +1,24 @@
+.option-container {
+  .option-select-container {
+    position: relative;
+    width: 60%;
+    top: 20%;
+
+    button {
+      height: auto;
+      font-size: 40px;
+      text-align: start;
+      border: none;
+      background: none;
+    }
+
+    .selected {
+      color: red;
+    }
+
+    .divide-line {
+      background-color: black;
+      height: 1px;
+    }
+  }
+}
