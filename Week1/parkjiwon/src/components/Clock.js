@@ -31,12 +31,9 @@ const Clock = ({onPlus, mode}) =>{
         setIsRunning(false);
         setTime(0);
     };
-    const onClickPlus = useCallback(
-        e=>{
-            onPlus(formatTime(time));
-        },
-        [onPlus, time],
-    );
+    const onClickPlus = ()=>{
+        onPlus(formatTime(time));
+    }
 
 
     // 시간을 00: 00: 00: 00 형식으로 반환
@@ -53,7 +50,7 @@ const Clock = ({onPlus, mode}) =>{
     };
 
     return(
-        <div className='Clock'>
+        <div className='clock-container'>
             <div className='title'>{mode}</div>
             <div className='time'>{formatTime(time)}</div>
             <div className='buttons'>

@@ -10,24 +10,17 @@ const App = () =>{
 
   const [records, setRecords] = useState([]); // 시간 기록 배열
   const nextId = useRef(1); // record의 id 초기화
-  const onPlus = useCallback(
-    text => {
-      const record = {
-        id: nextId.current,
-        text,
-      };
 
-      setRecords(records.concat(record)); // 리스트에 새 recods추가
-      nextId.current +=1;
-    },
-    [records],
-  );
+  const onPlus = (text)=>{
+    const record = text;
+    setRecords(records.concat(record));
+  };
 
   return (
-    <div className='App'>
-      <SelectMode selectedMode={selectedMode} changeMode={setSelectedMode}></SelectMode>
-      <Clock onPlus={onPlus} mode={selectedMode}></Clock>
-      <RecordsList records={records}></RecordsList>
+    <div className='app-container'>
+      <SelectMode selectedMode={selectedMode} changeMode={setSelectedMode} />
+      <Clock onPlus={onPlus} mode={selectedMode} />
+      <RecordsList records={records} />
     </div>
   );
 }
