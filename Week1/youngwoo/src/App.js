@@ -19,28 +19,15 @@ function App() {
             onClick={() => handleTabClick('timer')}
             style={{marginTop: 100}}
             >타이머</h1>
-        <div style={{
-          width: "100%",
-          textAlign: "center",
-          borderBottom: "1px solid #aaa",
-          lineHeight: "0.1em",
-        }}
-      >
+        <div className="line">
       </div>
-        <h1 className={`tab ${mode === 'stopwatch' ? 'active' : null}`}
+        <h1 className={`tab ${mode === 'stopwatch' && 'active'}`}
             onClick={() => handleTabClick('stopwatch')}
             >스톱워치</h1>
       </div>
 
-      <div style={{width: "30px"}}></div>
-      <div style={{
-                width: "30px",
-                textAlign: "center",
-                borderLeft: "3px solid #aaa",
-                lineHeight: "0.1em",
-                height: 500,
-                }}
-            >
+      <div className='empty-space'></div>
+      <div className='divider'>
             </div>
       <div className="content">
         {mode === 'timer' ? <Timer /> : <Stopwatch />}

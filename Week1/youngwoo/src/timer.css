@@ -29,3 +29,15 @@
     flex: 1;
     text-align: left;
 }
+
+.empty-space{
+    width: 30px;
+}
+
+.divider{
+    width: 30px;
+    text-align: center;
+    border-left: 3px solid #aaa;
+    line-height: 0.1em;
+    height: 500px;
+}

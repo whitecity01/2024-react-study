@@ -57,15 +57,8 @@ function Timer(){
                 </div>
             </div>
 
-            <div style={{width: "30px"}}></div>
-            <div style={{
-                width: "30px",
-                textAlign: "center",
-                borderLeft: "3px solid #aaa",
-                lineHeight: "0.1em",
-                height: 500,
-                }}
-            >
+            <div className='empty-space'></div>
+            <div className='divider'>
             </div>
             
             <div className='records'>

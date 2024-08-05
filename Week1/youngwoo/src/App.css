@@ -16,3 +16,22 @@ body{
     display: flex;
     flex-direction: row;
 }
+
+.line{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+    line-height: 0.1em;
+}
+
+.empty-space{
+    width: 30px;
+}
+
+.divider{
+    width: 30px;
+    text-align: center;
+    border-left: 3px solid #aaa;
+    line-height: 0.1em;
+    height: 500px;
+}
