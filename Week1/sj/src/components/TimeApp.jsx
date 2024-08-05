@@ -25,39 +25,44 @@ const TimeApp = ({
       <span className="timeapp-header">{pageType}</span>
       <div className="timeapp-clock-container">
         <input
+          type="number"
           value={min10}
           onChange={(e) => {
-            setMin10(e.target.value);
+            setMin10(e.target.value % 10);
           }}
           disabled={pageType === "스톱워치"}
         />
         <input
+          type="number"
           value={min1}
           onChange={(e) => {
-            setMin1(e.target.value);
+            setMin1(e.target.value % 10);
           }}
           disabled={pageType === "스톱워치"}
         />
         :
         <input
+          type="number"
           value={sec10}
           onChange={(e) => {
-            setSec10(e.target.value);
+            setSec10(e.target.value % 10);
           }}
           disabled={pageType === "스톱워치"}
         />
         <input
+          type="number"
           value={sec1}
           onChange={(e) => {
-            setSec1(e.target.value);
+            setSec1(e.target.value % 10);
           }}
           disabled={pageType === "스톱워치"}
         />
         :
         <input
+          type="number"
           value={nano}
           onChange={(e) => {
-            setNano(e.target.value);
+            setNano(e.target.value % 10);
           }}
           disabled={pageType === "스톱워치"}
         />
