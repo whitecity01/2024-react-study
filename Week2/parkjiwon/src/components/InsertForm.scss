@@ -16,5 +16,9 @@
 
         background: rgb(0, 80, 73);
         color: white;
+
+        &:hover {
+            background: rgb(0, 100, 90);
+        }
     }
 }
