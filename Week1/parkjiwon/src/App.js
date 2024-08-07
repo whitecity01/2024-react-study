@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState} from 'react';
 
 import './App.scss';
 import SelectMode from './components/SelectMode';
@@ -9,7 +9,6 @@ const App = () =>{
   const [selectedMode, setSelectedMode] = useState('타이머'); // 처음 모드는 타이머
 
   const [records, setRecords] = useState([]); // 시간 기록 배열
-  const nextId = useRef(1); // record의 id 초기화
 
   const onPlus = (text)=>{
     const record = text;
@@ -19,7 +18,7 @@ const App = () =>{
   return (
     <div className='app-container'>
       <SelectMode selectedMode={selectedMode} changeMode={setSelectedMode} />
-      <Clock onPlus={onPlus} mode={selectedMode} />
+      <Clock onPlus={onPlus} mode={selectedMode} clearRecords={setRecords} />
       <RecordsList records={records} />
     </div>
   );

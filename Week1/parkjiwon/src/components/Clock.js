@@ -1,7 +1,7 @@
-import { useState, useCallback, useEffect} from 'react';
+import { useState, useEffect} from 'react';
 import './Clock.scss';
 
-const Clock = ({onPlus, mode}) =>{
+const Clock = ({onPlus, mode, clearRecords}) =>{
     const [time, setTime] = useState(0); // time 0으로 초기화
     const [isRunning, setIsRunning] = useState(false); // isRunning은 초기 false
 
@@ -20,9 +20,9 @@ const Clock = ({onPlus, mode}) =>{
     // 타이머 모드일 때 시간이 0이되면 더 감소하지 않고 멈추기
     useEffect(() => {
         if (mode === '타이머' && time <= 0) {
-            onClickStop();
+            setIsRunning(false);
         }
-    }, [time]);
+    }, [time, mode]);
 
     // 버튼 onClick함수들
     const onClickPlay = () => setIsRunning(true);
@@ -30,6 +30,7 @@ const Clock = ({onPlus, mode}) =>{
     const onClickStop = () => {
         setIsRunning(false);
         setTime(0);
+        clearRecords([]);
     };
     const onClickPlus = ()=>{
         onPlus(formatTime(time));
