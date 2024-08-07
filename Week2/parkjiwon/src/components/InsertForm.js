@@ -1,21 +1,18 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
 import './InsertForm.scss';
 
-const InsertForm = ({onInsert}) =>{
+const InsertForm = React.memo(({onInsert}) =>{
     const [value, setValue] = useState(''); // 입력 값
 
-    const onChange = useCallback( // 입력의 변화를 감지해 반영
-        e=>{
-            setValue(e.target.value);
-        }, []
-    );
+    const onChange = e=>{ // 입력의 변화 감지하여 value값 반영
+        setValue(e.target.value);
+    }
 
-    const onClick = useCallback( // onInsert를 실행하고, value값 초기화
-        () =>{
-            onInsert(value);
-            setValue('');
-        }, [onInsert, value]
-    );
+    const onClick = () =>{ // 버튼 클릭 시 실행
+        onInsert(value);
+        setValue('');
+    }
 
     return(
         <div className='insert-form-container'>
@@ -23,6 +20,6 @@ const InsertForm = ({onInsert}) =>{
             <button onClick={onClick}>+</button>
         </div>
     );
-};
+});
 
 export default InsertForm;
