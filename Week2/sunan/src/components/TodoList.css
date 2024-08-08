@@ -3,6 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 54px;
+    margin-left: 10px;
+    font-weight: 700;
 }
 .checkboxContainer{
     display: flex;
@@ -10,20 +13,27 @@
     align-items: center;
 }
 .checkbox{
+    -webkit-appearance: none; 
+    appearance: none; 
     background-color: transparent;
     color: black;
     width: 15px;
     height: 15px;
     margin-right: 10px;
     margin-left: 10px;
-    fill: aqua;
-    
+    border: 2px solid black;
+    border-radius: 15%;
 }
 .checkbox:checked{
-    background-color: aqua;
-    border-color: aqua;
+    background-color: #0A8AAD;
+    border-color: #0A8AAD;
     color: white;
-    fill: aqua;
+    align-items: center;
+}
+.checkbox:checked::after {
+    content: '✔'; 
+    font-size: 12px;
+    color: white;
 }
 .deleteButton{
     border: none;
