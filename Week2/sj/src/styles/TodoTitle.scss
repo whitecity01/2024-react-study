@@ -1,0 +1,15 @@
+.todo-title-container {
+  position: relative;
+  background-color: #0a8bab;
+  width: 100%;
+  height: 15%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .todo-title {
+    font-size: 28px;
+    color: white;
+  }
+}
