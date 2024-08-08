@@ -1,0 +1,49 @@
+.inputbox{
+    height: 40px;
+    background-color: black;
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+    margin-bottom: 8px;
+}
+.text{
+    height: 30px;
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    color:white;
+    outline: none;
+    cursor: pointer; 
+}
+.text::placeholder{
+    font-weight:500;
+    font-size: medium;
+    color: white;
+}
+.addjobbutton{
+    color: white;
+    font-weight: 900;
+    font-size: xx-large;
+    background-color: #4E5D79;
+    height: 40px;
+    outline: none;
+    border: none;
+    width: 40px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer; 
+}
+.addjobbutton:hover{
+    background-color: #4e5d7996   ;
+}
+.noTaskFont{
+    font-size: x-large;
+    font-weight: 900;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.line{
+    color: silver;
+}
