@@ -20,11 +20,7 @@ function App() {
       }
     }
   }
-  if (mode === 'TIMER') {
-    content = <Timer inputTime={inputTime} />;
-  } else {
-    content = <Stopwatch />;
-  }
+  content = mode === 'TIMER' ? <Timer inputTime={inputTime} /> : <Stopwatch />;
 
   return (
     <div className="container">

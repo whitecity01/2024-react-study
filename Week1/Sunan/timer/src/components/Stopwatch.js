@@ -38,14 +38,19 @@ function Stopwatch() {
       setStart(false);
       setRecords([]);
     };
+
+    const formatTime = (time) => {
+      return `0${Math.floor((time / 60000) % 60)}`.slice(-2) + " : " +
+             `0${Math.floor((time / 1000) % 60)}`.slice(-2) + " : " +
+             `0${Math.floor((time / 10) % 100)}`.slice(-2);
+    };
+  
     return (
       <div className='container'>
         <div className='item'>
           <div><h1>스톱워치</h1></div>
         <time>
-          {`0${Math.floor((time / 60000) % 60)}`.slice(-2)} :
-          {`0${Math.floor((time / 1000) % 60)}`.slice(-2)} :
-          {`0${Math.floor((time / 10) % 100)}`.slice(-2)}
+          {formatTime(time)}
         </time>
         <div className="button-container">
           <button onClick={handleStart}><FaPlayCircle className='icon'/></button>
