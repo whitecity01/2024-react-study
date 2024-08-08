@@ -1,0 +1,22 @@
+.item{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.checkbox{
+    margin-right: 10px;
+}
+
+.text{
+    text-align: left;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    border: none;
+    gap: 5px;
+}
+
