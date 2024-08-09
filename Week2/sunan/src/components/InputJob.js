@@ -10,8 +10,8 @@ function InputJob() {
   const handleAddTask = () => {
     if (inputValue.trim() === '') return;
     //비어있을때 추가하는거 막아줌
-    if(tasks.length===9){
-        alert("할 일이 너무 많습니다. 9개 이하로 넣어주세요.^^")
+    if(tasks.length===5){
+        alert("할 일이 너무 많습니다. 5개 이하로 넣어주세요.^^")
         setInputValue('');
         return;
     }
