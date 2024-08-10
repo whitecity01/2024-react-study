@@ -10,6 +10,8 @@ const InsertForm = React.memo(({onInsert}) =>{
     }
 
     const onClick = () =>{ // 버튼 클릭 시 실행
+        if(!value) return;
+
         onInsert(value);
         setValue('');
     }
