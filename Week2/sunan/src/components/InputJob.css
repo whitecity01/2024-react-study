@@ -5,6 +5,7 @@
     display: flex;
     padding-left: 10px;
     margin-bottom: 8px;
+    word-break: break-word;
 }
 .text{
     height: 30px;

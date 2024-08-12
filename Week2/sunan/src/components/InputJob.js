@@ -29,6 +29,7 @@ function InputJob() {
     );
     setTasks(updatedTasks);
   };
+ 
   
   const handleDeleteTask = (id) => {
     setTasks(tasks.filter(task => task.id !== id));
@@ -52,7 +53,7 @@ function InputJob() {
           tasks.map(task => (
             <div>
                 <TodoList key={task.id} id={task.id} task={task.title} done={task.done} onDelete={handleDeleteTask} onFinish={changeFinish}/>
-                {tasks[tasks.length - 1].id !== task.id && <hr className='line' />}
+                {tasks[tasks.length - 1 ].id !== task.id && <hr className='line' />}
             </div>
           ))
         )}

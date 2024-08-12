@@ -10,7 +10,6 @@ body{
   width: 700px;
   height: 480px;
   display: flex;
-  justify-content: start;
   flex-direction: column;
 }
 .title{
