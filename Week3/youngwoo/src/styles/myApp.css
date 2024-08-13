@@ -1,0 +1,48 @@
+.App{
+  width: 100vw;
+  height: 100vh;
+}
+
+.goToHome{
+  margin-bottom: 5px;
+}
+
+.container{
+  border-radius: 10px;
+  outline: auto;
+}
+
+.title{
+  text-align: center;
+  font-size: 30px;
+  font-weight:600;
+  margin-bottom: 10px;
+}
+
+.date{
+  display: flex;
+  justify-content: center;
+}
+
+.inputDate{
+  margin-bottom: 5px;
+}
+
+.movies{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.detailMovie{
+  margin-bottom: 30px;
+  position: relative;
+  width: 30%;
+  word-break: keep-all; /* 사이즈가 넘어갈 때 문자 단위로 자르기 */
+  border-bottom: 1px solid #ddd;
+    &:last-child {
+      border-bottom: none;
+    }
+}
