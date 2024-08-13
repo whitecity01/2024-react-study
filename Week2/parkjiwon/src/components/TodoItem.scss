@@ -1,0 +1,30 @@
+.todo-item-container{
+    display: flex;
+
+    .check-btn{
+        font-size: 30px;
+    }
+
+    .todo-text{
+        flex: 1;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        word-break: break-word; // 단어의 길이가 컨테이너 크기를 초과하면 다음줄로 강제 개행
+    }
+
+    .checked{
+        color: gray;
+        text-decoration: line-through;
+    }
+
+    .delete-btn{
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+
+        &:hover {
+            background: rgba(255, 0, 0, 0.1);
+        }
+    }
+}
