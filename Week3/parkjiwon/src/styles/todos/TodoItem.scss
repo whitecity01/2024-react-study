@@ -1,0 +1,35 @@
+.todo-item-container {
+    display: flex;
+    align-items: center;
+  
+    .todo-text {
+      flex: 1;
+      font-size: 20px;
+      display: flex;
+      padding: 5px;
+    }
+  
+    .checked {
+      color: gray;
+      text-decoration: line-through;
+    }
+  
+    .todo-edit-input {
+      flex: 1;
+      font-size: 20px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    .check-btn, .edit-btn, .save-btn, .cancel-btn, .delete-btn {
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+  
+      &:hover {
+        background: rgba(255, 0, 0, 0.1);
+      }
+    }
+  }
+  
