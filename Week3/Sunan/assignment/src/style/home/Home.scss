@@ -1,0 +1,43 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px; 
+
+        .home-icon {
+            margin-right: 10px; 
+            font-size: 2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .link-item {
+            margin-top: 10px;   
+            text-decoration: none; // 링크 기본 밑줄 제거하기
+            color: #333; 
+            font-size: 1.2rem; // 링크 텍스트 크기 조정
+
+            &:hover {
+                color: #007bff; 
+            }
+        }
+        .line{
+            margin-top: 20px;
+            width: 50px;
+            border-width: 2px;
+            border-color: silver;
+        }
+    }
+}
