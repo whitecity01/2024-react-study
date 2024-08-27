@@ -1,0 +1,17 @@
+.title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  
+    .back-icon {
+      margin-right: 10px;
+      font-size: 2rem;
+      &.back-icon:hover{
+        background-color: silver;
+      }
+    }
+  
+    h1 {
+      font-size: 25px;
+    }
+}

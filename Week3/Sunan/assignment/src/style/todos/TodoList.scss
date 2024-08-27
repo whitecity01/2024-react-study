@@ -1,0 +1,82 @@
+  .todobox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: 700;
+    min-height: 57px;
+    height: auto;
+    overflow-y: auto;
+  }
+  
+  .checkboxContainer {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  
+  .checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    color: black;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; // 글자가 많아져도 체크박스 크기 유지
+    position: relative;
+  
+    &.check::after {
+      content: '✔';
+      position: absolute;
+      background-color: #0a8aad;
+      border-color: #0a8aad;
+      color: white;
+      width: 137%;
+      height: 137%;
+      border-radius: 15%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+  }
+  
+  .deleteButton {
+    border: none;
+    outline: none;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #4e5d7996;
+    }
+  }
+  
+  .icon {
+    color: red;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+  }
+  
+  .labelstyle {
+    word-break: break-word;
+  
+    &.strikethrough {
+      text-decoration: line-through;
+      color: silver;
+    }
+  }
+  
