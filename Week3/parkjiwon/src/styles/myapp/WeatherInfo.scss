@@ -1,0 +1,38 @@
+.weatherinfo-container {
+    width: 800px;
+    height: 500px;
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+    border-radius: 15px;
+
+    .location-box {
+      color: rgb(69, 69, 99);
+      font-size: 80px;
+    }
+
+    .weather-icon {
+        width: 100px; // 원하는 이미지 크기로 설정
+    }
+  
+    .current-temp {
+        color: #ffeb3b;
+        font-size: 40px;
+    }
+  
+    .temp-range {
+        color: #885901;
+        font-size: 40px;
+    }
+  
+    .humidity {
+        color: #03a9f4;
+        font-size: 40px;
+    }
+  }
+  

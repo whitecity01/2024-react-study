@@ -1,0 +1,9 @@
+.todo-list-container{
+    max-height: 500px;
+
+    overflow-y: auto; // 세로 스크롤 생성
+
+    .empty-box{
+        margin: 30px;
+    }
+}

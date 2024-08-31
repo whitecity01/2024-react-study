@@ -1,0 +1,16 @@
+.myapp-container {
+  padding: 20px;
+  text-align: center;
+
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+}
